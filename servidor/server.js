@@ -9,7 +9,7 @@ const io = new Server(server);
 
 let users = {};
 let chatRooms = { 'general': [] }; // Almaceno los mensajes por sala
-let roomUsers = { 'general': new Set() }; // Nuevo: rastrear usuarios por sala
+let roomUsers = { 'general': new Set() }; // Rastreo usuarios por sala
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/index.html'));

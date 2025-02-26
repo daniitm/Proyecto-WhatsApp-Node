@@ -211,7 +211,7 @@ imageUpload.addEventListener('change', (e) => {
     }
 });
 
-// Nuevo: manejar la limpieza del chat
+// Limpieza del chat
 socket.on('clear chat', (room) => {
     if (room === currentRoom) {
         messagesDiv.innerHTML = '';
