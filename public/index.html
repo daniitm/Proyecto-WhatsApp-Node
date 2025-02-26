@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Clon</title>
+    <link rel="stylesheet" href="/style/styles.css">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/javascript/client.js" defer></script>
+</head>
+<body>
+    <h1 id="main-title">WhatsApp Node</h1>
+
+    <div id="login-screen">
+        <h2>Iniciar sesión</h2>
+        <div id="login-form">
+            <input type="text" id="username" placeholder="Nombre de usuario">
+            <input type="text" id="status" placeholder="Estado">
+            <div id="avatar-selection">
+                <h3>Selecciona un avatar:</h3>
+                <div id="avatar-options">
+                    <label>
+                        <input type="radio" name="avatar" value="img/avatar1.png">
+                        <img src="img/avatar1.png" alt="Avatar 1">
+                    </label>
+                    <label>
+                        <input type="radio" name="avatar" value="img/avatar2.png">
+                        <img src="img/avatar2.png" alt="Avatar 2">
+                    </label>
+                    <label>
+                        <input type="radio" name="avatar" value="img/avatar3.png">
+                        <img src="img/avatar3.png" alt="Avatar 3">
+                    </label>
+                </div>
+            </div>
+            <button id="login-btn">Entrar</button>
+        </div>
+    </div>
+
+    <div id="chat-screen" style="display: none;">
+        <div id="users-panel">
+            <div id="user-info">
+                <img id="user-avatar" src="" alt="Avatar">
+                <span id="user-name"></span>
+            </div>
+            <h3>Usuarios conectados</h3>
+            <ul id="users-list"></ul>
+            <div id="chat-rooms">
+                <h3>Chats</h3>
+                <ul id="chat-list">
+                    <li data-room="general" class="active">Chat Público</li>
+                </ul>
+            </div>
+        </div>
+        <div id="chat-panel">
+            <div id="messages"></div>
+            <form id="chat-form">
+                <input type="file" id="image-upload" accept="image/*">
+                <label for="image-upload" class="upload-btn">+</label>
+                <input type="text" id="message-input" placeholder="Escribe un mensaje...">
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        window.onload = () =>{
+            const socket = io();
+        }
+    </script>
+</head>
+<body>
+    <h1>Pagina inicial del proyecto</h1>
+</body>
+</html>--¡>
